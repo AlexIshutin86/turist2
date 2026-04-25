@@ -1,35 +1,35 @@
 
 
 
-@import "/turist2/elements/header/header.css";
-@import "/turist2/elements/runStrok/runStrips.css";
-@import "/turist2/elements/footer/footer.css";
+@import "./elements/header/header.css";
+@import "./elements/runStrok/runStrips.css";
+@import "./elements/footer/footer.css";
 
 
 
 
 
-@import "/turist2/styles/videoCarousel.css";
-@import "/turist2/styles/about.css";
-@import "/turist2/styles/respons.css";
-@import "/turist2/styles/header.css";
-@import "/turist2/styles/navForPoxod.css";
-@import "/turist2/styles/contactFormSection.css";
-@import "/turist2/styles/fotoFromBento.css";
-@import "/turist2/styles/footer.css";
-@import "/turist2/styles/opinion.css";
-@import "/turist2/styles/video-carousel.css";
-@import "/turist2/styles/schedule/schedule.css";
-@import "/turist2/styles/schedule/discription.css";
-@import "/turist2/styles/roors/root.css";
+@import "./styles/videoCarousel.css";
+@import "./styles/about.css";
+@import "./styles/respons.css";
+@import "./styles/header.css";
+@import "./styles/navForPoxod.css";
+@import "./styles/contactFormSection.css";
+@import "./styles/fotoFromBento.css";
+@import "./styles/footer.css";
+@import "./styles/opinion.css";
+@import "./styles/video-carousel.css";
+@import "./styles/schedule/schedule.css";
+@import "./styles/schedule/discription.css";
+@import "./styles/roors/root.css";
 
 
-@import "/turist2/videoSection/videoMain.css";
+@import "./videoSection/videoMain.css";
 
 
 
-@import "/turist2/fotoSection/fotoStylesMain.css";
-@import "/turist2/fotoSection/forGeneralFotoAlbom.css";
+@import "./fotoSection/fotoStylesMain.css";
+@import "./fotoSection/forGeneralFotoAlbom.css";
 
 
 
