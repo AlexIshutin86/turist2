@@ -105,8 +105,9 @@
 .opinionCarousel-container .card-Opinion {
     display: grid;
     grid-template-rows: auto;
-    min-height: 20rem;
-    width: 35rem;
+     min-height: 20rem;
+    /* width: 35rem; ← DELETE THIS LINE */
+    width: 100%; /* Take full width of grid column */
     list-style: none;
     background: #262636;
     border-radius: 2rem;
