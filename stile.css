@@ -137,7 +137,7 @@ section{
 
 
 
-@media (maxwidth: 360px) {
+@media (max-width: 360px) {
     
     .section{
     max-height: 30rem;
