@@ -58,9 +58,11 @@
 
 .opinionCarousel-container {
     display: grid;
+
     grid-auto-flow: column;
-    grid-auto-columns: minmax(50px, 100px); /* Min 300px, max 350px */
-    gap: 35rem;
+
+    grid-auto-columns: calc((100% / 2) - 1rem); /* Show 2 cards on desktop */
+    gap: 2rem;
     align-items: stretch;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -186,6 +188,7 @@
 .avatarDiskr {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     height: 6rem;
     gap: 1.5rem;
      padding: 1rem;
