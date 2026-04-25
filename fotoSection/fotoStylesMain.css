@@ -117,8 +117,7 @@
 
 .fotoItemsMain-container {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: repeat(auto-fit, minmax (300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 0.5rem;
     align-items: center;
     overflow-x: auto;
@@ -159,7 +158,7 @@
 /* Карточки */
 
 .fotoItemsMain-container li.cardFotoMain {
-    display: flex;
+  
     
     min-height: 35rem;
     
