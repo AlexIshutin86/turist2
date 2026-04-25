@@ -1,13 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    scroll-behavior: smooth;
-    list-style: none;
-}
-
 
 
 /* Основные стили карусели */
@@ -18,8 +8,8 @@
     background: rgb(65, 80, 116);
     border-radius: 3rem;
     position: relative;
-    margin: 2rem 0;
-    transform: translateY(-18rem);
+    
+    
     overflow: visible;
 }
 
@@ -31,7 +21,6 @@
     align-content: center;
     padding: 0 2rem;
     margin-bottom:  0rem;
-    margin-top: 3rem;
 }
 
 /* Заголовок */
@@ -43,14 +32,14 @@
 }
 
 .text2 h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
 }
 
 /* Контейнер для кнопок */
 .carousel-buttons {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     margin-right: 11rem;
 }
 
@@ -98,13 +87,13 @@
 }
 
 /* Стили для dragging */
-.videoCarousel-container.dragging {
+.videoCarousel.dragging {
     scroll-behavior: auto;
     scroll-snap-type: none;
     cursor: grabbing;
 }
 
-.videoCarousel-container.dragging .card {
+.videoCarousel.dragging .card {
     cursor: grabbing;
     user-select: none;
     pointer-events: none;
@@ -112,7 +101,7 @@
 }
 
 /* Карточки */
-.videoCarousel-container .card {
+.videoCarousel .card {
     min-height: 25rem;
     width: 25rem;
     list-style: none;
@@ -127,7 +116,7 @@
     transform: translateZ(0);
 }
 
-.videoCarousel-container .card:hover {
+.videoCarousel .card:hover {
     transform: translateY(-10px);
 }
 
@@ -153,20 +142,20 @@
 
 
 /* Скрыть скроллбар для красоты */
-.videoCarousel-container::-webkit-scrollbar {
+.videoCarousel::-webkit-scrollbar {
     height: 0px;
 }
 
-.videoCarousel-container::-webkit-scrollbar-track {
+.videoCarousel::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
 
-.videoCarousel-container::-webkit-scrollbar-thumb {
+.videoCarousel::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
 }
 
-.videoCarousel-container::-webkit-scrollbar-thumb:hover {
+.videoCarousel::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.8);
 }

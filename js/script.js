@@ -1,288 +1,31 @@
-
-function showSidebar(){
+function showSidebar() {
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex'
 }
 
-
-function hideSidebar(){
+function hideSidebar() {
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Получаем элементы
-const carousel = document.querySelector(".videoCarousel-container");
-const arrowBtns = document.querySelectorAll("#scrollLeft, #scrollRight"); // Исправлено
-let firstCardWidth;
-
-// Ждем загрузки DOM
-document.addEventListener("DOMContentLoaded", () => {
-    if (carousel) {
-        firstCardWidth = carousel.querySelector(".card").offsetWidth;
-    }
-});
-
-// Кнопки навигации
-if (arrowBtns.length > 0 && carousel) {
-    arrowBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const scrollAmount = btn.id === "scrollLeft" ? -firstCardWidth : firstCardWidth;
-            carousel.scrollBy({
-                left: scrollAmount,
-                behavior: "smooth"
-            });
-        });
-    });
-}
-
-// Drag and drop функционал
-if (carousel) {
-    let isDragging = false;
-    let startX;
-    let startScrollLeft;
-    
-    // Для мыши
-    const dragStart = (e) => {
-        isDragging = true;
-        carousel.classList.add("dragging");
-        startX = e.pageX - carousel.offsetLeft;
-        startScrollLeft = carousel.scrollLeft;
-        carousel.style.cursor = 'grabbing';
-    }
-    
-    const dragging = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        carousel.scrollLeft = startScrollLeft - walk;
-    }
-    
-    const dragStop = () => {
-        isDragging = false;
-        carousel.classList.remove("dragging");
-        carousel.style.cursor = 'grab';
-    }
-    
-    // Для touch (мобильные устройства)
-    const touchStart = (e) => {
-        isDragging = true;
-        carousel.classList.add("dragging");
-        startX = e.touches[0].pageX - carousel.offsetLeft;
-        startScrollLeft = carousel.scrollLeft;
-    }
-    
-    const touchMove = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        const x = e.touches[0].pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        carousel.scrollLeft = startScrollLeft - walk;
-    }
-    
-    // Обработчики для мыши
-    carousel.addEventListener("mousedown", dragStart);
-    window.addEventListener("mousemove", dragging);
-    window.addEventListener("mouseup", dragStop);
-    
-    // Обработчики для touch
-    carousel.addEventListener("touchstart", touchStart);
-    window.addEventListener("touchmove", touchMove);
-    window.addEventListener("touchend", dragStop);
-    
-    // Защита от случайных кликов
-    let hasMoved = false;
-    
-    carousel.addEventListener("mousemove", () => {
-        hasMoved = true;
-    });
-    
-    carousel.addEventListener("mouseup", (e) => {
-        if (hasMoved) {
-            e.preventDefault();
-            hasMoved = false;
-        }
-    });
-    
-    carousel.style.cursor = 'grab';
-}
-
-
-
-
-
-
-
-// ========== КАРУСЕЛЬ ОТЗЫВОВ ==========
-// Получаем элементы
-
-
-
-const opinionCarousel = document.querySelector(".opinionCarousel-container");
-const opinionArrowBtns = document.querySelectorAll("#scrollLeftOpinion, #scrollRightOpinion");
-let opinionFirstCardWidth;
-
-// Ждем загрузки DOM
-document.addEventListener("DOMContentLoaded", () => {
-    if (opinionCarousel) {
-        const firstCard = opinionCarousel.querySelector(".card-Opinion");
-        if (firstCard) {
-            opinionFirstCardWidth = firstCard.offsetWidth;
-        }
-    }
-});
-
-// Кнопки навигации
-if (opinionArrowBtns.length > 0 && opinionCarousel) {
-    opinionArrowBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const scrollAmount = btn.id === "scrollLeftOpinion" ? -opinionFirstCardWidth : opinionFirstCardWidth;
-            opinionCarousel.scrollBy({
-                left: scrollAmount,
-                behavior: "smooth"
-            });
-        });
-    });
-}
-
-// Drag and drop функционал
-if (opinionCarousel) {
-    let isDragging = false;
-    let startX;
-    let startScrollLeft;
-    
-    // Для мыши
-    const dragStart = (e) => {
-        isDragging = true;
-        opinionCarousel.classList.add("dragging");
-        startX = e.pageX - opinionCarousel.offsetLeft;
-        startScrollLeft = opinionCarousel.scrollLeft;
-        opinionCarousel.style.cursor = 'grabbing';
-    }
-    
-    const dragging = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        const x = e.pageX - opinionCarousel.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        opinionCarousel.scrollLeft = startScrollLeft - walk;
-    }
-    
-    const dragStop = () => {
-        isDragging = false;
-        opinionCarousel.classList.remove("dragging");
-        opinionCarousel.style.cursor = 'grab';
-    }
-    
-    // Для touch (мобильные устройства)
-    const touchStart = (e) => {
-        isDragging = true;
-        opinionCarousel.classList.add("dragging");
-        startX = e.touches[0].pageX - opinionCarousel.offsetLeft;
-        startScrollLeft = opinionCarousel.scrollLeft;
-    }
-    
-    const touchMove = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        const x = e.touches[0].pageX - opinionCarousel.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        opinionCarousel.scrollLeft = startScrollLeft - walk;
-    }
-    
-    // Обработчики для мыши
-    opinionCarousel.addEventListener("mousedown", dragStart);
-    window.addEventListener("mousemove", dragging);
-    window.addEventListener("mouseup", dragStop);
-    
-    // Обработчики для touch
-    opinionCarousel.addEventListener("touchstart", touchStart);
-    window.addEventListener("touchmove", touchMove);
-    window.addEventListener("touchend", dragStop);
-    
-    // Защита от случайных кликов
-    let hasMoved = false;
-    
-    opinionCarousel.addEventListener("mousemove", () => {
-        hasMoved = true;
-    });
-    
-    opinionCarousel.addEventListener("mouseup", (e) => {
-        if (hasMoved) {
-            e.preventDefault();
-            hasMoved = false;
-        }
-    });
-    
-    opinionCarousel.style.cursor = 'grab';
-}
-
-
-
-
-
-
-
-
-
-/// ========== КАРУСЕЛЬ ВИДЕО ==========
-// Получаем элементы
-
-
-
-
-const videoCarousel = document.querySelector(".video-Carousel-container");
+// ========== ПЕРВАЯ КАРУСЕЛЬ (videoCarousel) ==========
+const videoCarousel = document.querySelector(".videoCarousel-container"); // Fixed spelling!
 const videoArrowBtns = document.querySelectorAll("#scrollLeft, #scrollRight");
-let videoFirstCardWidth;
+let firstVideoCardWidth;
 
-// Функция для получения актуальной ширины карточки
-function getVideoCardWidth() {
+document.addEventListener("DOMContentLoaded", () => {
     if (videoCarousel) {
-        const firstCard = videoCarousel.querySelector(".card-video");
+        const firstCard = videoCarousel.querySelector(".card");
         if (firstCard) {
-            videoFirstCardWidth = firstCard.offsetWidth;
-            return videoFirstCardWidth;
+            firstVideoCardWidth = firstCard.offsetWidth;
         }
     }
-    return 300; // Значение по умолчанию
-}
-
-// Ждем загрузки DOM
-document.addEventListener("DOMContentLoaded", () => {
-    getVideoCardWidth();
-    
-    // Обновляем ширину при изменении размера окна
-    window.addEventListener("resize", () => {
-        getVideoCardWidth();
-    });
 });
 
-// Кнопки навигации
 if (videoArrowBtns.length > 0 && videoCarousel) {
     videoArrowBtns.forEach(btn => {
-        btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const currentWidth = getVideoCardWidth();
-            const scrollAmount = btn.id === "scrollLeft" ? -currentWidth : currentWidth;
-            
+        btn.addEventListener("click", () => {
+            const scrollAmount = btn.id === "scrollLeft" ? -firstVideoCardWidth : firstVideoCardWidth;
             videoCarousel.scrollBy({
                 left: scrollAmount,
                 behavior: "smooth"
@@ -291,13 +34,11 @@ if (videoArrowBtns.length > 0 && videoCarousel) {
     });
 }
 
-// Drag and drop функционал
 if (videoCarousel) {
     let isDragging = false;
     let startX;
     let startScrollLeft;
     
-    // Для мыши
     const dragStart = (e) => {
         isDragging = true;
         videoCarousel.classList.add("dragging");
@@ -321,7 +62,6 @@ if (videoCarousel) {
         videoCarousel.style.cursor = 'grab';
     }
     
-    // Для touch (мобильные устройства)
     const touchStart = (e) => {
         isDragging = true;
         videoCarousel.classList.add("dragging");
@@ -338,60 +78,203 @@ if (videoCarousel) {
         videoCarousel.scrollLeft = startScrollLeft - walk;
     }
     
-    // Обработчики для мыши
     videoCarousel.addEventListener("mousedown", dragStart);
     window.addEventListener("mousemove", dragging);
     window.addEventListener("mouseup", dragStop);
-    
-    // Обработчики для touch
     videoCarousel.addEventListener("touchstart", touchStart);
     window.addEventListener("touchmove", touchMove);
     window.addEventListener("touchend", dragStop);
     
-    // Защита от случайных кликов
-    let hasMoved = false;
-    
-    videoCarousel.addEventListener("mousemove", () => {
-        hasMoved = true;
-    });
-    
-    videoCarousel.addEventListener("mouseup", (e) => {
-        if (hasMoved) {
-            e.preventDefault();
-            hasMoved = false;
-        }
-    });
-    
     videoCarousel.style.cursor = 'grab';
+}
+
+// ========== ВТОРАЯ КАРУСЕЛЬ (opinionCarousel) ==========
+const opinionCarousel = document.querySelector(".opinionCarousel-container");
+const opinionArrowBtns = document.querySelectorAll("#scrollLeftOpinion, #scrollRightOpinion");
+let opinionFirstCardWidth;
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (opinionCarousel) {
+        const firstCard = opinionCarousel.querySelector(".card-Opinion"); // Fixed! Was .cards-Opinion
+        if (firstCard) {
+            opinionFirstCardWidth = firstCard.offsetWidth;
+        }
+    }
+});
+
+if (opinionArrowBtns.length > 0 && opinionCarousel) {
+    opinionArrowBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const scrollAmount = btn.id === "scrollLeftOpinion" ? -opinionFirstCardWidth : opinionFirstCardWidth;
+            opinionCarousel.scrollBy({
+                left: scrollAmount,
+                behavior: "smooth"
+            });
+        });
+    });
+}
+
+if (opinionCarousel) {
+    let isDragging = false;
+    let startX;
+    let startScrollLeft;
+    
+    const dragStart = (e) => {
+        isDragging = true;
+        opinionCarousel.classList.add("dragging");
+        startX = e.pageX - opinionCarousel.offsetLeft;
+        startScrollLeft = opinionCarousel.scrollLeft;
+        opinionCarousel.style.cursor = 'grabbing';
+    }
+    
+    const dragging = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        const x = e.pageX - opinionCarousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        opinionCarousel.scrollLeft = startScrollLeft - walk;
+    }
+    
+    const dragStop = () => {
+        isDragging = false;
+        opinionCarousel.classList.remove("dragging");
+        opinionCarousel.style.cursor = 'grab';
+    }
+    
+    const touchStart = (e) => {
+        isDragging = true;
+        opinionCarousel.classList.add("dragging");
+        startX = e.touches[0].pageX - opinionCarousel.offsetLeft;
+        startScrollLeft = opinionCarousel.scrollLeft;
+    }
+    
+    const touchMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        const x = e.touches[0].pageX - opinionCarousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        opinionCarousel.scrollLeft = startScrollLeft - walk;
+    }
+    
+    opinionCarousel.addEventListener("mousedown", dragStart);
+    window.addEventListener("mousemove", dragging);
+    window.addEventListener("mouseup", dragStop);
+    opinionCarousel.addEventListener("touchstart", touchStart);
+    window.addEventListener("touchmove", touchMove);
+    window.addEventListener("touchend", dragStop);
+    
+    opinionCarousel.style.cursor = 'grab';
 }
 
 
 
 
+// ========== ТРЕТЬЯ КАРУСЕЛЬ (video-Carousel) - REWRITTEN ==========
+// This carousel uses .video-Carousel-container, not .carouselByDays-container
+const thirdCarousel = document.querySelector(".video-Carousel-container");
+const thirdArrowBtns = document.querySelectorAll("#scrollLeftThird, #scrollRightThird"); // Same IDs as first carousel! (BAD)
+let thirdCardWidth;
 
-//popUpDialog
+function getThirdCardWidth() {
+    if (thirdCarousel) {
+        const firstCard = thirdCarousel.querySelector(".card-video");
+        if (firstCard) {
+            thirdCardWidth = firstCard.offsetWidth;
+            return thirdCardWidth;
+        }
+    }
+    return 300;
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+    getThirdCardWidth();
+    window.addEventListener("resize", () => {
+        getThirdCardWidth();
+    });
+});
 
-const enrolButton = document.querySelector('#buttonOpinion1')
-const enrolDialog = document.querySelector('#enrolOpinionDialog1')
-const closeModel = enrolDialog.querySelector('#closeDialog1')
+if (thirdArrowBtns.length > 0 && thirdCarousel) {
+    thirdArrowBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const currentWidth = getThirdCardWidth();
+            const scrollAmount = btn.id === "scrollLeftThird" ? -currentWidth : currentWidth;
+            
+            thirdCarousel.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    });
+}
 
+if (thirdCarousel) {
+    let isDragging = false;
+    let startX;
+    let startScrollLeftThird;
+    
+    const dragStart = (e) => {
+        isDragging = true;
+        thirdCarousel.classList.add("dragging");
+        startX = e.pageX - thirdCarousel.offsetLeft;
+        startScrollLeftThird = thirdCarousel.scrollLeft;
+        thirdCarousel.style.cursor = 'grabbing';
+    }
+    
+    const dragging = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        const x = e.pageX - thirdCarousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        thirdCarousel.scrollLeftThird = startScrollLeftThird - walk;
+    }
+    
+    const dragStop = () => {
+        isDragging = false;
+        thirdCarousel.classList.remove("dragging");
+        thirdCarousel.style.cursor = 'grab';
+    }
+    
+    const touchStart = (e) => {
+        isDragging = true;
+        thirdCarousel.classList.add("dragging");
+        startX = e.touches[0].pageX - thirdCarousel.offsetLeft;
+        startScrollLeftThird = thirdCarousel.scrollLeftThird;
+    }
+    
+    const touchMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        const x = e.touches[0].pageX - thirdCarousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        thirdCarousel.scrollLeftThird = startScrollLeftThird - walk;
+    }
+    
+    thirdCarousel.addEventListener("mousedown", dragStart);
+    window.addEventListener("mousemove", dragging);
+    window.addEventListener("mouseup", dragStop);
+    thirdCarousel.addEventListener("touchstart", touchStart);
+    window.addEventListener("touchmove", touchMove);
+    window.addEventListener("touchend", dragStop);
+    
+    thirdCarousel.style.cursor = 'grab';
+}
 
+// ========== POPUP DIALOG ==========
+const enrolButton = document.querySelector('#buttonOpinion1');
+const enrolDialog = document.querySelector('#enrolOpinionDialog1');
+const closeModel = enrolDialog ? enrolDialog.querySelector('#closeDialog1') : null;
 
-enrolButton.addEventListener('click', () => {
-    enrolDialog.showModal();
+if (enrolButton && enrolDialog && closeModel) {
+    enrolButton.addEventListener('click', () => {
+        enrolDialog.showModal();
+    });
 
-})
-
-closeModel.addEventListener('click', () => {
-    enrolDialog.close();
-
-})
-
-
-
-
-
-
-
-
+    closeModel.addEventListener('click', () => {
+        enrolDialog.close();
+    });
+}

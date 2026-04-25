@@ -43,7 +43,7 @@ li{
 
 i {
     font-size: 1.5rem;
-    color: #2ccadf;
+    color: #ffffff;
 
 }
 
@@ -52,7 +52,7 @@ i {
 h1{
     color: #ffffff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
 }
 
 @media (max-width: 400px) {
@@ -63,12 +63,9 @@ h1{
 }
 }
 
-
 @media (max-width: 900px) {
     h1{
     font-size: 1.5rem;
-   
-
 }
 }
 
@@ -83,7 +80,7 @@ h2{
 
 h3{
     color: rgb(255, 255, 255);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 100; 
     line-height: 1.4rem;
@@ -95,7 +92,7 @@ h3{
     color: rgb(46, 19, 122);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 100; 
-    line-height: 2rem;
+    line-height: 1rem;
     
 }
 
@@ -107,7 +104,7 @@ h3{
 p{
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(199, 21, 21);
+    color: rgb(238, 13, 13);
     font-weight: 100;
     line-height: 1.4rem;
     
@@ -124,7 +121,11 @@ p{
 
 
 
-
+a {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 
 
@@ -132,12 +133,12 @@ p{
 .btn{
     color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: linear-gradient(90deg, #039b03, #05c405);
+    background: linear-gradient(90deg, #09c909, #15c405);
     border: none;
     border-radius: 2rem;
-    padding: 0.8rem 2rem;
+    padding: 0.4rem 1rem;
   
-    font-size: 1/8rem;
+    font-size: 1.5rem;
     font-weight: 500;
     cursor: pointer;
     display: inline-flex;
@@ -156,11 +157,12 @@ p{
 .btn2 {
  
     display: flex;
+    
     align-content: center;
     justify-content: center;
     
     background: linear-gradient(to right, rgb(42, 219, 25));
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0.8rem 2rem;
     border-radius: 3rem;
     cursor: pointer;

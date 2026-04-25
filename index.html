@@ -4,84 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolgaMore</title>
-    <link rel="stylesheet" href="styles/stile.css">
+    
+    
+    <link rel="stylesheet" href="./stile.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    
 </head>
 
+<div id="header-placeholder"></div>
 
 <body>
 
 
-    <header class="header">
-
-        <ul class="sidebar">
-
-            <li onclick="hideSidebar()">
-                <i class="fa-regular fa-circle-xmark"></i>
-            </li>
-
-            <li>
-                <a href="#blog">Статьи</a>
-            </li>
-
-            <li>
-                <a href="./schedule.html">Расписание 2026</a>
-            </li>
-
-            <li>
-                <a href="./fotoSection/fotoMain/">Фото</a>
-            </li>
-
-            <li>
-                <a href="#video">Видео</a>
-            </li>
-
-            <li>
-                <a href="#about">Обо мне</a>
-            </li>
-
-        </ul>
-
-
-        <a href="#"><span class="logo">Волга Море</span></a>
-
-
-        
-
-
-
-        <ul class="nav-links">
-
-            <li class="hideOnMobile">
-                <a href="#blog">Статьи</a>
-            </li>
-
-            <li class="hideOnMobile">
-                <a href="./schedule.html">Расписание 2026</a>
-            </li>
-
-            <li class="hideOnMobile">
-                <a href="./fotoSection/fotoMain.html">Фото</a>
-            </li>
-
-            <li class="hideOnMobile">
-                <a href="#video">Видео</a>
-            </li>
-
-            <li class="hideOnMobile">
-                <a href="#about">Обо мне</a>
-            </li>
-
-        </ul>
-
-        <i class="fa-solid fa-bars" id="menu-icon" onclick="showSidebar()"></i>
-
-        <button class="contact-btn" >Контакты</button>
-
-    </header>
-    
 <main>
 
     <section id="topDescription" class="topDescription">
@@ -100,7 +35,7 @@
 
                      <div class="btn">
                         <i class="fa-solid fa-arrow-down"></i>
-                        Расписание походов
+                        <a href="/schedule.html">Расписание походов </a>
 
                     </div>
 
@@ -129,8 +64,8 @@
                 </div>
 
                 <div class="btn">
-                        <i class="fa-solid fa-arrow-down"></i>
-                        Узнать больше
+                        <a href="/aboutSection/aboutBig.html"><i class="fa-solid fa-arrow-down"></i>
+                        Узнать больше</a>
                 </div>
 
             </div>
@@ -149,7 +84,7 @@
 
                 <div class="grid-card">
                     <span>50+</span>
-                    <h3>Групп под руководством</h3>
+                    <h3>Групп под руководствомs</h3>
                 </div>
 
             </div>
@@ -177,7 +112,7 @@
 
             <li class="card" onclick="window.location.href='volgaMore.html'">
             <div class="img">
-                <img src="./video/one.jpg" alt="img" draggable="false">
+                <img src="/fotoForOne/first.jpg" alt="img" draggable="false">
             </div>
             <h2>Волга море</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
@@ -185,7 +120,7 @@
 
             <li class="card">
                 <div class="img">
-                    <img src="./video/two.jpg" alt="img" draggable="false">
+                    <img src="/video/two.jpg" alt="img" draggable="false">
                 </div>
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
@@ -193,7 +128,7 @@
 
             <li class="card">
                 <div class="img">
-                    <img src="./video/three.jpg" alt="img" draggable="false">
+                    <img src="/video/three.jpg" alt="img" draggable="false">
                 </div>
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
@@ -201,7 +136,7 @@
 
             <li class="card">
                 <div class="img">
-                    <img src="./video/fore.jpg" alt="img" draggable="false">
+                    <img src="/video/fore.jpg" alt="img" draggable="false">
                 </div>
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
@@ -209,17 +144,17 @@
 
             <li class="card">
                 <div class="img">
-                    <img src="./video/five.jpg" alt="img" draggable="false">
+                    <img src="/video/five.jpg" alt="img" draggable="false">
                 </div>
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
             </li>
         </ul>
 
-        <div class="btn-container">
-            <div class="bt2">
+        <div class="btn2-container">
+            <div class="btn2">
                 <i class="fa-solid fa-arrow-down"></i>
-                <h3>Расписание походов</h3>
+                <a href="/schedule.html">Расписание походов</a>
             </div>
         </div>
     </section>
@@ -227,7 +162,7 @@
     <!-- Секция Фото из походов -->
     <section class="photo-gallery">
 
-    <div class="gallery-container">
+        <div class="gallery-container">
 
      
         <h1 class="gallery-title">Фото из походов</h1>
@@ -237,7 +172,7 @@
             
             <!-- Карточка 1 - большая (2x2) -->
             <div class="gallery-card">
-                <a href="./fotoSection/fotoMain/derbent/index.html" class="card-link">
+                <a href="/fotoSection/fotoMain/derbent/index.html" class="card-link">
                     <div class="gallery-image">
                         <img src="./volgaMore/reference/1.jpg" alt="Крайний Север">
                         <div class="gallery-overlay">
@@ -255,7 +190,7 @@
             <!-- Карточка 2 -->
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="./volgaMore/reference/20250818_160119.jpg" alt="Гранитный берег">
+                    <img src="/volgaMore/reference/20250818_160119.jpg" alt="Гранитный берег">
                     <div class="gallery-overlay">
                         <span class="gallery-year">2025</span>
                     </div>
@@ -269,7 +204,7 @@
             <!-- Карточка 3 -->
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="./video/one.jpg" alt="Кольский полуостров">
+                    <img src="/video/one.jpg" alt="Кольский полуостров">
                     <div class="gallery-overlay">
                         <span class="gallery-year">2025</span>
                     </div>
@@ -283,7 +218,7 @@
             <!-- Карточка 4 -->
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="./video/two.jpg" alt="Дальние Зеленцы">
+                    <img src="/video/two.jpg" alt="Дальние Зеленцы">
                     <div class="gallery-overlay">
                         <span class="gallery-year">2025</span>
                     </div>
@@ -297,17 +232,16 @@
         </div>
 
         
-            <a href="./fotoSection/fotoMain.html" class="btn2">
+            <a href="/fotoSection/fotoMain.html" class="btn2">
                 <i  class="fa-solid fa-arrow-down"></i>
-                <h3>Все фотогалереи</h3>
+                Все фотогалереи
             </a>
         
 
-    </div>
+        </div>
     </section>
 
-
- <section id="opinionCarousel" class="opinionCarousel">
+    <section id="opinionCarousel" class="opinionCarousel">
 
     <div class="carousel-header">
 
@@ -421,19 +355,19 @@
         <div class="carousel-header">
 
             <div class="text1">
-                <h1>Записывайся в поход</h1>
+                <h1>Другие походы</h1>
             </div>
             
             <div class="carousel-buttons">
-                <i id="scrollLeft" class="fa-solid fa-arrow-left"></i>
-                <i id="scrollRight" class="fa-solid fa-arrow-right"></i>
+                <i id="scrollLeftThird" class="fa-solid fa-arrow-left"></i>
+                <i id="scrollRightThird" class="fa-solid fa-arrow-right"></i>
             </div>
 
         </div>
 
         <ul class="video-Carousel-container">
 
-            <li class="card-video" onclick="window.location.href='volgaMore.html'">
+            <li class="card-Third" onclick="window.location.href='volgaMore.html'">
             <div class="img">
                 <img src="./video/one.jpg" alt="img" draggable="false">
             </div>
@@ -441,7 +375,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
             </li>
 
-            <li class="card-video">
+            <li class="card-Third">
                 <div class="img">
                     <img src="./video/two.jpg" alt="img" draggable="false">
                 </div>
@@ -449,7 +383,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
             </li>
 
-            <li class="card-video">
+            <li class="card-Third">
                 <div class="img">
                     <img src="./video/three.jpg" alt="img" draggable="false">
                 </div>
@@ -457,7 +391,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
             </li>
 
-            <li class="card-video">
+            <li class="card-Third">
                 <div class="img">
                     <img src="./video/fore.jpg" alt="img" draggable="false">
                 </div>
@@ -465,7 +399,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
             </li>
 
-            <li class="card-video">
+            <li class="card-Third">
                 <div class="img">
                     <img src="./video/five.jpg" alt="img" draggable="false">
                 </div>
@@ -474,55 +408,23 @@
             </li>
         </ul>
 
-        <div class="btn2-container">
-            <div class="btn2">
-                <i class="fa-solid fa-arrow-down"></i>
-                <h3>Расписание походов</h3>
-            </div>
-        </div>
+       
     </section>
 
+   
+   
+   
+   
+    <div id="footer-placeholder"></div>
 
 
 </main>
 
 
 
-    <footer>
-    <DIV class="footer-container">
-
-        <div class="info-footer">
-
-            <div class="podsek">
-            <h3>Волга-Море</h3>
-            <h3>www.pohodnalegke.ru</h3>
-            </div>
-
-
-            <div class="podsek">
-            <h3>Политика конфиденциальности</h3>
-            <h3>Политика cookie-файлов</h3>
-            </div>
-
-            <div class="podsekIcon">
-            <i class="fa-brands fa-telegram"></i>
-            <i class="fa-brands fa-telegram"></i>
-            <i class="fa-brands fa-telegram"></i>
-            <i class="fa-brands fa-telegram"></i>
-            </div>
-
-            
-        </div>
-
-        <div class="podsek2">
-            <h3>2019-2026 © Павел Руденко. Все права защищены. Копирование материалов без активной ссылки на источник запрещено. Вся представленная на сайте информация носит информационный характер и не является публичной офертой.</h3>
-            <h3>Разработка alexIshutin</h3>
-        </div>
-  
-    </footer-container>
-        
-    </footer>
     
+  
+
 
 
 <dialog id="enrolOpinionDialog1" class="opinion-dialog">
@@ -547,8 +449,9 @@
 
 </dialog>
 
-    <script src="./js/script.js" defer></script>
-    <script src="./js/header.js" defer></script>
+<script src="./js/script.js" defer></script>
+<script src="./js/header.js" defer></script>
+<script src="./js/footer-loader.js" defer></script>
             
 </body>
 </html>
