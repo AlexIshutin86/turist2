@@ -24,12 +24,12 @@
 @import "./styles/roors/root.css";
 
 
-@import "/videoSection/videoMain.css";
+@import "./videoSection/videoMain.css";
 
 
 
-@import "/fotoSection/fotoStylesMain.css";
-@import "/fotoSection/forGeneralFotoAlbom.css";
+@import "./fotoSection/fotoStylesMain.css";
+@import "./fotoSection/forGeneralFotoAlbom.css";
 
 
 
