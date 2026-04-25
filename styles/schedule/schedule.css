@@ -1,0 +1,35 @@
+
+
+.scheduleItems {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 2fr));
+    justify-content: center;
+    align-content: center;
+    gap: 0.1rem;
+    padding-top: 1rem;
+
+    background-color: rgb(14, 53, 45);
+    margin-top: -10rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+    padding-right: 5rem;
+    z-index: 2;
+    border-radius: 3rem;
+}
+
+
+
+.schedule-description{
+    background-color: rgb(9, 68, 92);
+    display: grid;
+    align-items: start;
+    justify-content: center;
+}
+
+
+
+
+
+

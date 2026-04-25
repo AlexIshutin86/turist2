@@ -1,0 +1,178 @@
+/* ========== СЕКЦИЯ РАСПИСАНИЯ ========== */
+.discriptionSchedule {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 53, 45);
+   
+    z-index: 2;
+    border-radius: 3rem;
+    padding: 1rem 0;
+}
+
+/* Контейнер с карточками */
+.features-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+
+/* Карточки - все в одной позиции, разные Z-индексы */
+.cardfeature {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1200px;
+    min-width: none;
+    background-color: rgb(31, 57, 97);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    
+    
+}
+
+
+
+.scheduleText{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    min-width: none;
+    background-color: rgb(7, 23, 43);
+    border-radius: 3rem;
+    overflow: hidden;
+    
+    
+    
+    
+}
+
+/* Активная карточка (видимая) */
+.cardfeature.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+  
+    z-index: 10;
+}
+
+/* Предыдущая карточка (слева, полупрозрачная) */
+.cardfeature.prev {
+    position: absolute;
+    
+    opacity: 0.5;
+    visibility: visible;
+    
+    z-index: 5;
+}
+
+/* Следующая карточка (справа, полупрозрачная) */
+.cardfeature.next {
+    position: absolute;
+    
+    opacity: 0.5;
+    visibility: visible;
+    
+    z-index: 5;
+}
+
+/* Карточка сзади (самая дальняя) */
+.cardfeature.back {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    
+    z-index: 1;
+}
+
+/* Изображение */
+.cardfeature .img {
+    width: 60rem;
+    height: 520px;
+    overflow: hidden;
+}
+
+.cardfeature .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Контент */
+.left-partD {
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+      width: 60rem;
+      background-color: #ffaa00;
+}
+
+.intPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    margin-bottom: 1rem;
+}
+
+
+
+
+.left-partD p {
+ 
+    margin-bottom: 1rem;
+}
+
+.btn-booking {
+    background: linear-gradient(90deg, #ffd700, #ffaa00);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.6rem 1.2rem;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Кнопки навигации */
+.carousel-controls {
+   margin-left: -55rem;
+   margin-top: 28rem;
+   
+   
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+   
+    z-index: 100;
+}
+
+.nav-arrow {
+    
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.nav-arrow:hover {
+    background: #001aff;
+    color: #333;
+    transform: scale(1.05);
+}
+
