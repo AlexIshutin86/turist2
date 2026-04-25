@@ -1,18 +1,18 @@
 
 
 
-@import "./elements/header/header.css";
-@import "./elements/runStrok/runStrips.css";
-@import "./elements/footer/footer.css";
+@import "/turist2/elements/header/header.css";
+@import "/turist2/elements/runStrok/runStrips.css";
+@import "/turist2/elements/footer/footer.css";
 
 
 
 
 
-@import "./styles/videoCarousel.css";
-@import "./styles/about.css";
-@import "./styles/respons.css";
-@import "./styles/header.css";
+@import "/turist2/styles/videoCarousel.css";
+@import "/turist2/styles/about.css";
+@import "/turist2/styles/respons.css";
+@import "/turist2/styles/header.css";
 @import "./styles/navForPoxod.css";
 @import "./styles/contactFormSection.css";
 @import "./styles/fotoFromBento.css";
