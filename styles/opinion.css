@@ -56,23 +56,22 @@
     color: rgb(141, 36, 36);
 }
 
-/* Контейнер карточек */
 .opinionCarousel-container {
-
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 1) - 20px);
-    gap: 1rem;
-    align-items: center;
-
+    grid-auto-columns: minmax(50px, 100px); /* Min 300px, max 350px */
+    gap: 35rem;
+    align-items: stretch;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding:1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 3rem 1rem;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    will-change: scroll-position;
-    transform: translateZ(0);
-    backface-visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .opinionCarousel-container {
+        grid-auto-columns: minmax(180px, 320px); /* Smaller on mobile */
+    }
 }
 
 /* Стили для dragging - ИСПРАВЛЕНО */
