@@ -2,7 +2,7 @@
 
 
 @import "./elements/header/header.css";
-@import "./elements/runStrok/runStrips.css";
+
 @import "./elements/footer/footer.css";
 
 
@@ -21,7 +21,7 @@
 @import "./styles/video-carousel.css";
 @import "./styles/schedule/schedule.css";
 @import "./styles/schedule/discription.css";
-@import "./styles/roors/root.css";
+
 
 
 @import "./videoSection/videoMain.css";
